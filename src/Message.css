@@ -1,0 +1,10 @@
+.Message {
+    color: rgb(0, 0, 255);
+    text-shadow: 1px 2px 3px pink;
+    font-weight: 800;
+}
+
+.location {
+    text-transform: uppercase;
+    color: crimson;
+}

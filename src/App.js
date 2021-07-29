@@ -1,8 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Message from './Message'
-
-const prof = "разработчик";
+import { Message } from './Message'
 
 function App() {
   return (
@@ -10,9 +8,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Моё приложение
+          Введите ваше имя и текст
         </p>
-        <Message specialty = {prof} location = "уроке 1"></Message>
+        <Message />
         {/* <a
           className="App-link"
           href="https://reactjs.org"

@@ -8,3 +8,20 @@
     text-transform: uppercase;
     color: crimson;
 }
+
+#author,
+#text {
+    display: block;
+    width: 220px;
+    height: 30px;
+}
+
+button {
+    margin: 20px 0 15px 0;
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    box-shadow: inset 0 1px 1px rgba(111, 55, 125, 0.8), inset 0 -1px 0px rgba(27, 19, 138, 0.2), 0 9px 16px 0 rgba(25, 0, 255, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #150a1e;
+    background-image: linear-gradient(#fdfbff, #090dfd);
+    text-shadow: 0 0 21px rgba(36, 138, 255, 0.5), 0 -1px 0 #000000;
+}

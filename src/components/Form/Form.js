@@ -6,9 +6,6 @@ import TextField from '@material-ui/core/TextField';
 export const Form = ({ onSendMessage }) => {
   const [value, setValue] = useState('');
   const inputRef = useRef(null);
-  useEffect(() => {
-    inputRef.current?.focus();
-  }, [])
 
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -30,9 +27,13 @@ export const Form = ({ onSendMessage }) => {
     inputRef.current?.focus();
 }
 
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, [])
+  
 return (
-    <form onSubmit={handleSubmit} ref={inputRef}> 
-      <TextField id="standard-basic" ref={inputRef} label="Ваш текст" variant="filled" className="textField" type="text" value={value} onChange={handleChange} onLoad={focusInput}></TextField>
+    <form onSubmit={handleSubmit}> 
+      <TextField id="standard-basic" inputRef={inputRef} label="Ваш текст" variant="filled" className="textField" type="text" value={value} onChange={handleChange} onLoad={focusInput}></TextField>
       {/* <input className="textField" ref={inputRef} type="text" value={value} onChange={handleChange} /> */}
       <input className="buttonChat" type="submit" onClick={handleSubmit}  />
     </form>

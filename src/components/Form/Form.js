@@ -11,10 +11,6 @@ export const Form = ({ onSendMessage }) => {
     setValue(e.target.value);
   }
 
-  const focusInput = () => {
-    inputRef.current.focus();
-  }
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -33,7 +29,7 @@ export const Form = ({ onSendMessage }) => {
   
 return (
     <form onSubmit={handleSubmit}> 
-      <TextField id="standard-basic" inputRef={inputRef} label="Ваш текст" variant="filled" className="textField" type="text" value={value} onChange={handleChange} onLoad={focusInput}></TextField>
+      <TextField id="standard-basic" inputRef={inputRef} label="Ваш текст" variant="filled" className="textField" type="text" value={value} onChange={handleChange}></TextField>
       {/* <input className="textField" ref={inputRef} type="text" value={value} onChange={handleChange} /> */}
       <input className="buttonChat" type="submit" onClick={handleSubmit}  />
     </form>

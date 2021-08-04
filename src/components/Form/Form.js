@@ -1,10 +1,11 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { AUTHORS } from '../../constants';
 import './Form.css';
+import TextField from '@material-ui/core/TextField';
 
 export const Form = ({ onSendMessage }) => {
   const [value, setValue] = useState('');
-  const inputRef = useRef();
+  const inputRef = useRef(null);
 
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -19,12 +20,18 @@ export const Form = ({ onSendMessage }) => {
       text: value,
     });
     setValue('');
-  }
+    inputRef.current?.focus();
+}
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <input className="textField" ref={inputRef} type="text" value={value} onChange={handleChange} />
-      <input className="buttonChat" type="submit" />
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, [])
+  
+return (
+    <form onSubmit={handleSubmit}> 
+      <TextField id="standard-basic" inputRef={inputRef} label="Ваш текст" variant="filled" className="textField" type="text" value={value} onChange={handleChange}></TextField>
+      {/* <input className="textField" ref={inputRef} type="text" value={value} onChange={handleChange} /> */}
+      <input className="buttonChat" type="submit" onClick={handleSubmit}  />
     </form>
   )
 }

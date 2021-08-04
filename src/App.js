@@ -3,11 +3,11 @@ import './App.css';
 import { MessageList  } from './components/MessageList/MessageList'
 import { Form } from "./components/Form/Form";
 import { AUTHORS } from "./constants";
-import { useRef, useEffect, useState, useCallback } from "react";
-import { Message } from "./components/Message/Message";
+import { ChatList } from "./components/ChatList";
+import { useEffect, useState, useCallback } from "react";
 
 function App() {
-  const [messages, setMessages] = useState([
+    const [messages, setMessages] = useState([
     { text: "Текст", author: AUTHORS.human, id: 1 },
   ]);
 
@@ -19,9 +19,7 @@ function App() {
   );
 
   useEffect(() => {
-    if (
-      !messages.length ||
-      messages[messages.length - 1].author === AUTHORS.robot
+    if ( !messages.length || messages[messages.length - 1].author === AUTHORS.robot
     ) {
       return;
     }
@@ -36,6 +34,8 @@ function App() {
       setMessages([...messages, newMessage]);
     }, 1000);
 
+    
+
     return () => clearTimeout(timeout);
   }, [messages]);
 
@@ -44,7 +44,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Чат
+          Чаты
         </p>
         {/* <a
           className="App-link"
@@ -55,8 +55,10 @@ function App() {
           Learn React
         </a> */}
       </header>
-      <MessageList messages={messages} />
-      <Form onSendMessage={handleSendMessage} />
+      <ChatList />
+      <div className="form">
+        <Form onSendMessage={handleSendMessage} /></div>
+      <div className="messageList"><MessageList messages={messages} /></div>
     </div>
   );
 }

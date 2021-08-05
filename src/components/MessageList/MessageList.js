@@ -1,5 +1,3 @@
-// Lesson 3
-
 import React, { useCallback } from "react";
 import { Message } from "../Message/Message";
 

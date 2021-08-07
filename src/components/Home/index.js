@@ -61,19 +61,19 @@ const timeout = setTimeout(() => {
 }, 1000);
 
     return () => clearTimeout(timeout);
-  }, [chats]);
+}, [chats]);
 
-  return (
+return (
     <div className="root">
-      <ChatList chats={chats}/>
-      {!!chatId && (
-       <div>
-       <MessageList messages={chats[chatId].messages} />
-       <Form onSendMessage={handleSendMessage} />
-     </div>
-   )}
+    <ChatList chats={chats}/>
+    {!!chatId && (
+    <div>
+        <MessageList messages={chats[chatId].messages} />
+        <Form onSendMessage={handleSendMessage} />
     </div>
-  );
+    )}
+    </div>
+);
 }
 
 export default Home;

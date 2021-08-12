@@ -5,7 +5,7 @@ import TextField from '@material-ui/core/TextField';
 
 export const Form = ({ onSendMessage }) => {
   const [value, setValue] = useState('');
-  const inputRef = useRef(null);
+  const inputRef = useRef();
 
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -25,7 +25,7 @@ export const Form = ({ onSendMessage }) => {
 
 useEffect(() => {
   inputRef.current?.focus();
-}, [])
+}, []);
 
 return (
     <form onSubmit={handleSubmit}> 

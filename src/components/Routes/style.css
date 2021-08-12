@@ -5,3 +5,20 @@
 .MuiList-padding {
     padding-right: 50px !important;
 }
+
+.home {
+    margin-left: 100px;
+    line-height: 30pt;
+    display: flex;
+    list-style-type: none;
+    font-size: 18pt;
+    font-weight: bolder;
+}
+
+li {
+    padding-left: 50px;
+}
+
+a {
+    text-decoration: none;
+}

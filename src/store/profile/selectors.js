@@ -1,0 +1,1 @@
+export const selectNameProfile = (state) => state.profile.name;

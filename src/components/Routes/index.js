@@ -8,7 +8,7 @@ import "./style.css"
 export default function Routes() {
     return (
         <BrowserRouter>
-        <ul style={{marginLeft: "100px", lineHeight:"30pt"}} >
+        <ul className="home">
             <li>
                 <Link to="/home">Главная</Link>
             </li>
@@ -23,6 +23,10 @@ export default function Routes() {
                     render={(data) => <Profile match={data.match} />}
                 ></Route>
                 <Route path="/home/:chatId?"><Home /></Route>
+                <Route path="/nochat">
+                    <h2> Чат отсутствует </h2>
+                    <Link to="/home"></Link>
+                </Route>
                 <Route path="/" exact>
                     <h2>Приветсвуем Вас!</h2>
                 </Route>

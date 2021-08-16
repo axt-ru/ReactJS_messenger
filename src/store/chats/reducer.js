@@ -4,17 +4,17 @@ import { ADD_CHAT, SEND_MESSAGE, DESTROY_CHAT } from "./actionType";
 const initialState = {
     chat_1: {
         messages: [{text: "Текст из первого чата", author: AUTHORS.human, id: "chat_1-1" }],
-        name: "Чат первый",
+        name: "Чат №1",
         id: "chat_1"
     },
     chat_2: {
         messages: [{text: "Текст из второго чата", author: AUTHORS.human, id: "chat_2-1" }],
-        name: "Чат второй",
+        name: "Чат №2",
         id: "chat_2"
     },
     chat_3: {
         messages: [],
-        name: "Чат третий",
+        name: "Чат №3",
         id: "chat_3"
     },
 };

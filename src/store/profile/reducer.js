@@ -13,12 +13,6 @@ export const profileReducer = (state = initialState, action) => {
                 name: action.payload,
             };
         }
-        // case PROFILE_DROP_NAME: {
-        //     return {
-        //     ...state,
-        //     name: "",
-        //     };
-        // }
             default: 
                 return state;
     }

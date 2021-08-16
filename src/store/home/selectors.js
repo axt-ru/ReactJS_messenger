@@ -1,14 +1,5 @@
-// import { AUTHORS } from "../../constants";
-// import { handleSendMessage } from "../../components/Home";
+import { AUTHORS } from "../../constants";
 
-export const selectNameHome = state => state.chats;
+export const selectChatsHome = (state) => state.chats;
 
-// export const setTimeoutHome =(() => {
-//     const newMessage = {
-//         text: "Принято",
-//         author: AUTHORS.robot,
-//         id: Date.now(),
-//     };
-
-//     handleSendMessage(newMessage);
-// }, 1000); 
+export const selectNameHome = (state) => state.profile.name || AUTHORS.human;

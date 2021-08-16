@@ -15,7 +15,6 @@ export const Form = ({ onSendMessage }) => {
     e.preventDefault();
 
     onSendMessage({
-      author: AUTHORS.human,
       id: Date.now(),
       text: value,
     });

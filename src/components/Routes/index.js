@@ -1,20 +1,17 @@
 import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 import React from 'react';
 import Home from '../Home';
 import Profile from '../Profile';
 import "./style.css"
 
-
 export default function Routes() {
     return (
+        <div className="backImage">
         <BrowserRouter>
         <ul className="home">
-            <li>
-                <Link to="/home">Главная</Link>
-            </li>
-            <li>
-                <Link to="/profile">Профиль</Link>
-            </li>
+            <Button variant="outlined" size="large" className="button"><Link to="/home">Главная</Link></Button>
+            <Button variant="outlined" size="large" > <Link to="/profile">Профиль</Link></Button>
         </ul>
 
             <Switch>
@@ -28,13 +25,14 @@ export default function Routes() {
                     <Link to="/home"></Link>
                 </Route>
                 <Route path="/" exact>
-                    <h2>Приветсвуем Вас!</h2>
+                    <h2>Приветствуем Вас!</h2>
                 </Route>
                 <Route path="*">
                     <h2>Ошибка 404</h2>
                 </Route>
             </Switch>
         </BrowserRouter>
+        </div>
     );
 }
 

@@ -12,7 +12,7 @@ export default function Profile() {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(changeName (value));
+        dispatch(changeName(value));
         setValue("");
     };
     
@@ -20,12 +20,6 @@ export default function Profile() {
         setValue(e.target.value);
     };
     
-    // const toggleShowState = useCallback(() => {
-    //     dispatch({
-    //         type: PROFILE_CHANGE_STATE,
-    //     })
-    // }, [dispatch]); 
-
     return (
         <>
         <h3 style={{textAlign: "center"}}>Профиль участника</h3>
@@ -36,12 +30,6 @@ export default function Profile() {
             <br />
             <button className="buttonProfile" onClick={handleSubmit}>Сохранить имя</button>
         </form>
-        {/* <input style={{width: "30px", height: "30px"}} className="state" 
-            type="checkbox"
-            checked={showState}
-            value={showState}
-            onChange={toggleShowState}
-            /> */}
         </>
     );
 }

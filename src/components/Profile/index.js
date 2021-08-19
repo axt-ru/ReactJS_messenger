@@ -22,8 +22,8 @@ export default function Profile() {
     
     return (
         <>
-        <h3 style={{textAlign: "center"}}>Профиль участника</h3>
-        <h4> Имя участника: <span>{name}</span></h4>
+        <h2 style={{textAlign: "center"}}>Профиль участника</h2>
+        <h3> Имя участника: <span>{name}</span></h3>
         {/* {showState && <div className="state">{name}</div>} */}
         <form action="" onSubmit={handleSubmit}>
             <input className="nameProfile" value={value} onChange={handleChange} />

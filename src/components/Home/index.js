@@ -2,8 +2,8 @@ import { MessageList  } from '../MessageList/MessageList'
 import { Form } from "../Form/Form";
 import { useCallback } from "react";
 import { useParams, Redirect } from 'react-router-dom';
-import { ChatList } from "../ChatList"
-import './style.css'
+import { ChatList } from "../ChatList";
+import './style.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { destroyChat, messageFromBot } from "../../store/chats/actions";
 import { selectChatsHome, selectNameHome } from '../../store/home/selectors';

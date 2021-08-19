@@ -3,6 +3,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import { AddChat} from './AddChat';
 import { ChatItem } from './ChatItem';
+import './style.css';
 
 export const ChatList = ({ chats, onDeleteChat }) => {
   return (

@@ -39,6 +39,10 @@
   }
 }
 
+p {
+  margin: 20px 0;
+}
+
 .form {
   position: relative;
   top: -100px;

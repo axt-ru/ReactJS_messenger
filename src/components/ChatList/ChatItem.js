@@ -1,24 +1,22 @@
 import React from 'react';
-import { ListItem } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import { ListItem } from '@material-ui/core';
 import "./style.css";
+import { deleteChatWithFirebase } from "../../store/chats/actions";
+import { useDispatch } from "react-redux";
 
 export const ChatItem = ({ id, name, onDelete }) => {
+    const dispatch = useDispatch();
     const handleDelete = () => {
-    onDelete(id);
-}
-
-const [selectedIndex, setSelectedIndex] = React.useState(1);
-
-const handleListItemClick = (event, index) => {
-    setSelectedIndex(index);
-    }
+        dispatch(deleteChatWithFirebase(id));
+};
 
     return (
-    <ListItem button selected={selectedIndex == 2} onClick={(event) => handleListItemClick(event, 0)}>
+    // <ListItem button selected={selectedIndex == 2} onClick={(event) => handleListItemClick(event, 0)}>
+    <ListItem>
         <Link to={`/home/${id}`}>{name}</Link>
         <div style={{cursor: "pointer" }} onClick={handleDelete}>&nbsp;&#10060;</div>
     </ListItem>
     );
-}
+};
 

@@ -1,15 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { AUTHORS } from '../../constants';
 import './Form.css';
+import { useInput } from '../../utilities/useInput';
 import TextField from '@material-ui/core/TextField';
 
 export const Form = ({ onSendMessage }) => {
-  const [value, setValue] = useState('');
   const inputRef = useRef();
-
-  const handleChange = (e) => {
-    setValue(e.target.value);
-  }
+  const { value, handleChange, reset } = useInput('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,8 +15,7 @@ export const Form = ({ onSendMessage }) => {
       id: Date.now(),
       text: value,
     });
-    setValue('');
-    inputRef.current?.focus();
+    reset();
 }
 
 useEffect(() => {

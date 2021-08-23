@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useSelector } from "react-redux";
 import { AUTHORS } from "../../constants";
-import { selectNameHome } from "../../store/home/selectors";
+import { selectNameProfile } from "../../store/profile/selectors";
 import './style.css';
 
 export const Message = ({ text, author }) => {
-  const name = useSelector(selectNameHome);
+  const name = useSelector(selectNameProfile);
   return (
     <div className="message">
       {author === AUTHORS.human ? name : author}: {text}

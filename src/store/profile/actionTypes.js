@@ -1,1 +1,3 @@
 export const PROFILE_CHANGE_NAME = 'PROFILE_CHANGE_NAME';
+export const SET_AUTH = "PROFILE::SET_AUTH";
+export const SET_ERROR = "PROFILE::SET_ERROR";

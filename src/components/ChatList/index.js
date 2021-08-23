@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import { AddChat} from './AddChat';
 import { ChatItem } from './ChatItem';
 import './style.css';
+import { Link } from "react-router-dom";
 
-export const ChatList = ({ chats, onDeleteChat }) => {
+export const ChatList = ({ chats, onDeleteChat, onAddChat }) => {
   return (
-    <List component="nav" >
+    <List>
       {Object.values(chats).map((c) => (
           <ChatItem
             name={c.name}
@@ -17,7 +18,7 @@ export const ChatList = ({ chats, onDeleteChat }) => {
           />
         ))}
         <ListItem>
-          <AddChat />
+          <AddChat onAddChat={onAddChat} />
         </ListItem>    
     </List>
   );

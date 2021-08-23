@@ -1,9 +1,10 @@
 .App {
-  text-align: center;
+  text-align: left;
+  font-size: 20px;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -15,7 +16,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,7 +33,25 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+p {
+  margin: 20px 0;
+}
+
+.form {
+  position: relative;
+  top: -100px;
+  left: 150px;
+}
+
+.messageList {
+  position: relative;
+  top: -200px;
+  text-align: left;
+  left: 400px;
 }

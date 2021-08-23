@@ -1,5 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import Routes from './components/Routes';
+import { Provider } from "react-redux";
+import { store, saveInStorage } from "./store";
+import { PersistGate } from "redux-persist/integration/react";
+import LinearProgress from '@material-ui/core/LinearProgress';
 
 function App() {
   return (
@@ -7,17 +12,14 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Чаты
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <Provider store={store}>
+        <PersistGate persistor={saveInStorage} loading={<LinearProgress variant="buffer" value={20} valueBuffer={50} />}>
+          <Routes />
+        </PersistGate>
+      </Provider>
     </div>
   );
 }

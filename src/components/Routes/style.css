@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.MuiListItem-gutters {
+    padding-right: 50px;
+}
+
+.MuiList-padding {
+    padding-right: 50px !important;
+}
+
+.home {
+    padding: 30px 0 30px 0;
+    line-height: 30pt;
+    display: flex;
+    list-style-type: none;
+    font-size: 18pt;
+    font-weight: bolder;
+    justify-content: space-evenly;
+}
+
+.MuiButton-outlinedSizeLarge {
+    margin: 0 0 0 50px !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.backImage {
+    background-image: url(../../fon.jpg);
+    height: 1500px;
+}
+
+h2 {
+    text-align: center;
+}

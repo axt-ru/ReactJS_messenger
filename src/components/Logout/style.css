@@ -1,0 +1,8 @@
+.button-logout {
+    line-height: 30pt;
+    font-size: 12pt;
+    font-weight: bolder;
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+}

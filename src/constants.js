@@ -13,5 +13,5 @@ export const AUTHORS = {
   export const API_URL = "https://saurav.tech/NewsAPI/top-headlines/category/health/in.json";
 
   // https://saurav.tech/NewsAPI/top-headlines/category/health/in.json
-
+  // или
   // https://api.spaceflightnewsapi.net/v3/articles

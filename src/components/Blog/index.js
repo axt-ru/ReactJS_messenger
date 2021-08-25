@@ -7,7 +7,6 @@ import { getArticles } from "../../store/blog/actions";
 import './style.css';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-
 export default function Blog () {
     const loading = useSelector(selectArticlesLoading);
     const error = useSelector(selectArticlesError);
@@ -39,7 +38,7 @@ export default function Blog () {
     
     if (!articles.length) {
         return <h3>Нет статей</h3>;
-      }
+    }
 
     return articles.articles?.map((i) => 
     <List>
@@ -49,14 +48,4 @@ export default function Blog () {
     );
 };
 
-// setLoading(true);
-// fetch(API_URL)
-//     .then(response => {
-//     return response.json();
-// }).then(result => setArticles(result)).
-// catch(() => { 
-//     setError(true)
-// }). finally(()=> {
-//     setLoading(false);
-// });
 

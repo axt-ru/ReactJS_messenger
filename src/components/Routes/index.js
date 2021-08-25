@@ -38,10 +38,6 @@ export default function Routes() {
                         <Profile match={data.match} history={data.history} />
                     )}
                 />
-                {/* <Route
-                    path="/profile"
-                    render={(data) => <Profile match={data.match} />}
-                ></Route> */}
                 <PrivateRoute path="/home/:chatId?">
                     <Home />
                 </PrivateRoute>

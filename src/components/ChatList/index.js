@@ -4,7 +4,6 @@ import ListItem from '@material-ui/core/ListItem';
 import { AddChat} from './AddChat';
 import { ChatItem } from './ChatItem';
 import './style.css';
-import { Link } from "react-router-dom";
 
 export const ChatList = ({ chats, onDeleteChat, onAddChat }) => {
   return (
